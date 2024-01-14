@@ -1,16 +1,11 @@
 import { createBrowserRouter } from 'react-router-dom'
-import Home from 'views/Home'
 import Paths from './Paths'
-import Contact from 'views/Contact'
+import MainView from 'views/MainView'
 
 const router = createBrowserRouter([
   {
     path: Paths.Home,
-    element: <Home />,
-  },
-  {
-    path: Paths.Contact,
-    element: <Contact />,
+    element: <MainView />,
   },
 ])
 
