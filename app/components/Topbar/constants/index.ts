@@ -1,5 +1,3 @@
-import Menu from 'statics/Icons/Menu'
-
 const NAV_LIST = [
   {
     id: '#whyUs',

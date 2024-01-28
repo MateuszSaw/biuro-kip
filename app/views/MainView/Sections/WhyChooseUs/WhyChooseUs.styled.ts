@@ -14,6 +14,13 @@ const StyledCardsBox = styled.div`
   justify-content: center;
   padding: 0 20px;
 
+  ${({ theme }) => `
+    @media (${theme.breakpoints.mobile}) {
+      grid-template-columns: repeat(auto-fill, 390px);
+      grid-template-rows: repeat(auto-fill, 350px);
+    }
+  `}
+
   & > div {
     padding: 24px;
     display: flex;

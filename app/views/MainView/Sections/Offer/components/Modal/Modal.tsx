@@ -1,6 +1,5 @@
 import { FunctionComponent } from 'react'
 import {
-  StyledContent,
   StyledHeader,
   StyledModal,
   StyledWrapper,

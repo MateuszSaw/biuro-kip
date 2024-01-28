@@ -16,11 +16,17 @@ const StyledWrapper = styled.div`
   ${({ theme }) => `
     @media (${theme.breakpoints.laptopSmall}) {
      width: 100%;
+      padding: 92px 12px 24px 12px;
+
     }
 
     @media (${theme.breakpoints.tabletVertical}) {
       height: unset;
-      padding: 60px 0 32px 0;
+      padding: 60px 12px 32px 12px;
+    }
+
+    @media (${theme.breakpoints.tabletVertical}) {
+      padding: 24px 12px;
     }
   `}
 `
