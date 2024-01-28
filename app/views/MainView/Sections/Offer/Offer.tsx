@@ -3,9 +3,10 @@ import { StyledWrapper, StyledBoxContent, StyledHeader } from './Offer.styled'
 import ServiceBox from './components/ServiceBox'
 import Offers from './constatns/Offers'
 import Section from 'components/Section'
+import theme from 'constants/theme'
 
 const Offer: FunctionComponent = () => (
-  <Section link="offer">
+  <Section link="offer" backgroundColor={theme.colors.grayBackground}>
     <StyledWrapper>
       <StyledHeader>
         <p>

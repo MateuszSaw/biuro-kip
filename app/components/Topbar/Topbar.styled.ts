@@ -4,17 +4,13 @@ const StyledHeader = styled.header`
   width: 100%;
   position: fixed;
   top: 0;
-  opacity: 0.9;
   z-index: 100;
 
   ${({ theme }) => `
     background-color: ${theme.colors.white};
-
-    @media (${theme.breakpoints.tablet}) {
-      opacity: unset;
-    }
   `}
 `
+
 const StyledWrapper = styled.div`
   width: ${({ theme }) => theme.sectionWidth};
   margin: 0 auto;
@@ -26,18 +22,19 @@ const StyledWrapper = styled.div`
   ${({ theme }) => `
     @media (${theme.breakpoints.laptopSmall}) {
       width: 100%;
-      padding: 0 16px;
+      padding: 8px 24px;
     }
   `}
 `
 
-const StyledLogo = styled.div`
+const StyledLogo = styled.a`
   background-image: url('app/statics/images/logo4.svg');
   width: 300px;
   height: 64px;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  transition: all 0.3s ease;
 
   ${({ theme }) => `
     @media (${theme.breakpoints.tablet}) {
@@ -45,6 +42,10 @@ const StyledLogo = styled.div`
       height: 60px;
     }
   `}
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `
 
 const StyledNavigation = styled.nav<{ open?: boolean }>`
@@ -66,7 +67,8 @@ const StyledNavigation = styled.nav<{ open?: boolean }>`
   `}
 `
 
-const StyledLink = styled.div`
+const StyledLink = styled.a`
+  display: inline-block;
   padding: 12px 22px;
   margin-left: 8px;
   font-size: 18px;
@@ -76,15 +78,8 @@ const StyledLink = styled.div`
   transition: all 0.3s ease;
   box-shadow: 0 2px 4px rgba(74, 58, 255, 0);
   color: ${({ theme }) => theme.colors.blueFont};
-  /* color: #5776F9; */
   cursor: pointer;
-
-  a {
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    color: unset;
-  }
+  text-decoration: none;
 
   &:hover,
   &:focus {

@@ -12,14 +12,14 @@ const theme = {
     grayBackground: '#F9F9F9',
   },
   breakpoints: {
-    mobile: 'max-width: 600px',
-    tablet: 'max-width: 900px',
+    mobile: 'max-width: 640px',
+    tablet: 'max-width: 950px',
     tabletVertical: 'max-width: 1180px',
-    laptopSmall: 'max-width:1420px',
+    laptopSmall: 'max-width: 1668px',
   },
   sizes: {
     header: '56px',
-    topbarHeight: '84px',
+    topbarHeight: '80px',
   },
   sidePadding: '64px',
   sidePaddingMobile: '32px',

@@ -19,14 +19,14 @@ const Topbar: FunctionComponent = () => {
   return (
     <StyledHeader>
       <StyledWrapper>
-        <StyledLogo />
+        <StyledLogo href="#home" />
         <StyledButton onClick={handleClick}>
           <Menu />
         </StyledButton>
         <StyledNavigation open={open}>
           {NAV_LIST.map(({ id, name }) => (
-            <StyledLink key={name}>
-              <a href={id}>{name}</a>
+            <StyledLink key={name} href={id}>
+              {name}
             </StyledLink>
           ))}
         </StyledNavigation>

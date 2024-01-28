@@ -1,41 +1,31 @@
+import SectionWithPhoto from 'components/SectionWithPhoto'
 import { FunctionComponent } from 'react'
-import {
-  MainContainer,
-  StyledContent,
-  StyledHeader,
-  StyledSubtitle,
-  StyledContactInfo,
-} from './Contact.styled'
+import { CONTACT_IMAGE_LINK } from './constants'
+import { StyledBox, StyledContactItem, StyledContent } from './Contact.styled'
+import Header from 'components/Header'
 import Phone from 'statics/Icons/Phone'
 import Mail from 'statics/Icons/Mail'
 
 const Contact: FunctionComponent = () => (
-  <MainContainer id="contact">
+  <SectionWithPhoto link="contact" imageLink={CONTACT_IMAGE_LINK}>
     <StyledContent>
-      <StyledHeader>
-        Skontaktuj się <span>z nami!</span>
-      </StyledHeader>
-      <StyledSubtitle>
-        Odpowiemy na Twoje pytania podczas bezpłatnej konsultacji.
-        <br />
-        Usługi kadrowo-płacowe Agnieszka Świerczek
-      </StyledSubtitle>
-      <StyledContactInfo>
-        <a href="tel:+48333222555">
+      <StyledBox>
+        <Header
+          startText="Skontaktuj się"
+          endText="z nami"
+          subtitle="Odpowiemy na Twoje pytania podczas bezpłatnej konsultacji."
+        />
+        <StyledContactItem href="tel:+48333222555" target="blank">
           <Phone />
-          zadzwoń
-          <br />
-          333-222-555
-        </a>
-        <a href="mailto:twojemail@example.com">
+          <span>+48 888 797 051</span>
+        </StyledContactItem>
+        <StyledContactItem href="mailto:twojemail@example.com" target="blank">
           <Mail />
-          napisz
-          <br />
-          twojemail@example.com
-        </a>
-      </StyledContactInfo>
+          <span>agnieszka.swierczek@biuro-kip.pl</span>
+        </StyledContactItem>
+      </StyledBox>
     </StyledContent>
-  </MainContainer>
+  </SectionWithPhoto>
 )
 
 export default Contact

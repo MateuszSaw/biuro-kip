@@ -41,7 +41,7 @@ const ADDITIONAL_SERVICE = [
   'Przygotowanie korekt raportów rozliczeniowych ZUS za okresy przed obsługą',
   'Opracowanie innych zestawień i raportów wymaganych w danej organizacji',
   'Migracja danych kadrowo-płacowych przy zmianie oprogramowania',
-  'Pomoc w opracowaniu dokumentacji wewnętrznej w zakresie kadr i płac (regulaminy, zarządzenia, wzory oświadczeń, umów o pracę',
+  'Pomoc w opracowaniu dokumentacji wewnętrznej w zakresie kadr i płac (regulaminy, zarządzenia, wzory oświadczeń, umów o pracę)',
 ]
 
 export { HR_SERVICES, PAYROLL_SERVICE, ADDITIONAL_SERVICE }

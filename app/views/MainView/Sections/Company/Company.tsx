@@ -1,20 +1,18 @@
+import Section from 'components/Section'
 import { FunctionComponent } from 'react'
-import { StyledPhoto, StyledBackground, StyledWrapper } from './AbaoutMe.styled'
-import { StyledContent } from '../Company/Company.styled'
+import { StyledPhoto, StyledWrapper, StyledContent } from './Company.styled'
 import Header from 'components/Header'
 
-const AboutMe: FunctionComponent = () => (
-  <StyledBackground id="aboutMe">
+const Company: FunctionComponent = () => (
+  <Section link="company">
     <StyledWrapper>
-      <StyledPhoto />
+      <StyledPhoto $imageLink="app/statics/images/aboutMe.jpg" />
       <StyledContent>
         <Header
           startText="Nasza"
           endText="misja"
           subtitle="Jesteśmy partnerem godnym zaufania"
         />
-        {/* <StyledTag>nasza misja</StyledTag>
-        <StyledHeader>Jesteśmy partnerem godnym zaufania</StyledHeader> */}
         <p>
           Nasze biuro specjalizuje się w{' '}
           <span>
@@ -30,18 +28,19 @@ const AboutMe: FunctionComponent = () => (
         </p>
         <p>
           Na bazie wieloletniego i cennego doświadczenia w obsłudze
-          kadrowo-płacowej nabytego w małych i dużych przedsiębiorstwach oraz
-          firmach outsourcingowych powstała decyzja o założeniu naszej firmy.
-          Wyróżniamy się wysokim standardem świadczonych usług, polegającym na
-          bezwzględnej terminowości oraz współpracy i partnerstwie jakie niesie
-          za sobą prowadzenie działu kadrowo-płacowego wewnątrz firmy z
-          profesjonalizmem obsługi świadczonej w formie outsourcingu
-          kadrowo-płacowego.
+          kadrowo-płacowejnabytego w małych i dużych przedsiębiorstwach oraz
+          firmach outsourcingowych powstała decyzja o założeniu
+          naszejfirmy.Wyróżniamy się wysokim standardem świadczonych usług,
+          polegającym na bezwzględnej terminowości oraz współpracy i
+          partnerstwie jakie niesie za sobą prowadzenie działu kadrowo-płacowego
+          wewnątrz firmy z profesjonalizmem obsługi świadczonej w formie
+          outsourcingu kadrowo-płacowego.
         </p>
         <p>Potrzeby Twojej firmy i Twoich pracowników są najważniejsze.</p>
       </StyledContent>
+      <StyledPhoto $imageLink="app/statics/images/company2.png" />
     </StyledWrapper>
-  </StyledBackground>
+  </Section>
 )
 
-export default AboutMe
+export default Company
