@@ -23,6 +23,6 @@
 
     "baseUrl": "./app/"
   },
-  "include": ["app"],
+  "include": ["app", "index.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
