@@ -6,7 +6,7 @@ import Header from 'components/Header'
 const Company: FunctionComponent = () => (
   <Section link="company">
     <StyledWrapper>
-      <StyledPhoto $imageLink="app/statics/images/aboutMe.jpg" />
+      <StyledPhoto $imageLink="public/aboutMe.jpg" />
       <StyledContent>
         <Header
           startText="Nasza"
@@ -38,7 +38,7 @@ const Company: FunctionComponent = () => (
         </p>
         <p>Potrzeby Twojej firmy i Twoich pracowników są najważniejsze.</p>
       </StyledContent>
-      <StyledPhoto $imageLink="app/statics/images/company2.png" />
+      <StyledPhoto $imageLink="public/company2.png" />
     </StyledWrapper>
   </Section>
 )

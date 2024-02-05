@@ -1,3 +1,3 @@
-const HOME_IMAGE_LINK = 'app/statics/images/xyz.png'
+const HOME_IMAGE_LINK = 'public/home.png'
 
 export { HOME_IMAGE_LINK }
