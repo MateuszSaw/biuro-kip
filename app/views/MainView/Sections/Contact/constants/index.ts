@@ -1,3 +1,3 @@
-const CONTACT_IMAGE_LINK = 'public/contact.png'
+const CONTACT_IMAGE_LINK = '/contact.png'
 
 export { CONTACT_IMAGE_LINK }

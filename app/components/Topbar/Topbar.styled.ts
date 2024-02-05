@@ -28,7 +28,7 @@ const StyledWrapper = styled.div`
 `
 
 const StyledLogo = styled.a`
-  background-image: url('public/logo4.svg');
+  background-image: url('/logo4.svg');
   width: 300px;
   height: 64px;
   background-position: center;
