@@ -5,7 +5,7 @@ const theme = {
     lightGrey: '#EDF2F4',
     darkGrey: '#8D99AE',
     lightBlue: '#4BC4FB',
-    blue: '#0B55B5',
+    primaryBlue: '#226fb0',
     darkBlue: '#0B60A8',
     blueFont: '#014CAD',
     //backgrounds,

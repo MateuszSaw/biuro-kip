@@ -9,7 +9,7 @@ const StyledSection = styled.section<{ $imageLink: string }>`
   position: relative;
 
   ${({ theme }) => `
-    @media (${theme.breakpoints.mobile}) {
+    @media (${theme.breakpoints.tablet}) {
       height: unset;
     }
   `}
