@@ -11,7 +11,6 @@ const StyledSection = styled.section<{ $imageLink: string }>`
   ${({ theme }) => `
     @media (${theme.breakpoints.mobile}) {
       height: unset;
-
     }
   `}
 `
