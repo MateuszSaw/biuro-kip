@@ -4,25 +4,37 @@ const StyledWrapper = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  & > :first-child {
+    text-align: center;
+  }
 `
 
-const StyledHeader = styled.header`
+const StyledSubtitle = styled.header`
   text-align: center;
 
   p {
     font-size: 18px;
     font-weight: 500;
-    margin: 0 0 32px;
+    margin: 0 0 14px;
+    ${({ theme }) => `
+      @media (${theme.breakpoints.tabletVertical}) {
+        font-size: 16px;
+      }
+    `}
   }
 `
 
 const StyledBoxContent = styled.div`
-  flex-grow: 1;
-  width: 100%;
-  height: 100%;
+  margin-top: 14px;
   display: flex;
   justify-content: center;
   align-items: center;
+  ${({ theme }) => `
+      @media (${theme.breakpoints.tablet}) {
+        flex-direction: column;
+      }
+  `}
 `
 
-export { StyledWrapper, StyledBoxContent, StyledHeader }
+export { StyledWrapper, StyledBoxContent, StyledSubtitle }

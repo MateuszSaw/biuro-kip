@@ -7,6 +7,13 @@ const StyledContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: end;
+
+  ${({ theme }) => `
+    @media (${theme.breakpoints.tabletVertical}) {
+      padding-top: unset;
+      justify-content: center;
+    }
+  `}
 `
 
 const StyledBox = styled.div`
@@ -14,6 +21,18 @@ const StyledBox = styled.div`
   border-radius: 24px;
   padding: 56px 24px;
   text-align: center;
+
+  ${({ theme }) => `
+    @media (${theme.breakpoints.tabletVertical}) {
+      padding: 24px;
+      margin: 32px;
+    }
+
+    @media (${theme.breakpoints.mobile}) {
+      padding: 18px;
+      margin: 14px 0px;
+    }
+  `}
 `
 
 const StyledContactItem = styled.a`
@@ -33,6 +52,19 @@ const StyledContactItem = styled.a`
     margin-right: 8px;
     fill: #226fb0;
   }
+
+  ${({ theme }) => `
+    @media (${theme.breakpoints.mobile}) {
+      padding: 12px 6px;
+        font-size: 16px;
+
+      svg {
+        width: 60px;
+        height: 60px;
+        margin-right: 8px;
+      }
+    }
+  `}
 `
 
 export { StyledContent, StyledBox, StyledContactItem }

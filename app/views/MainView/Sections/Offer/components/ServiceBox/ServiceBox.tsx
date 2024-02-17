@@ -1,16 +1,21 @@
 import CheckPoint from 'statics/Icons/CheckPoint'
-import { FunctionComponent } from 'react'
+import { FunctionComponent, useState } from 'react'
 import {
   StyledBox,
   StyledItem,
+  StyledIcon,
   StyledList,
   StyledHeader,
   StyledButton,
+  StyledExpandMore,
+  StyledTitle,
+  StyledExpandButton,
 } from './ServiceBox.styled'
 import Offers from '../../constatns/Offers'
 import OfferMap from './utils/offerMap'
 import Modal from '../Modal'
 import useModal from '../Modal/hooks/useModal'
+import ExpandMore from 'statics/Icons/ExpandMore'
 
 type Props = {
   offer: Offers
@@ -19,6 +24,7 @@ type Props = {
 
 const ServiceBox: FunctionComponent<Props> = ({ offer, scaleUp }) => {
   const { open, handleOpen } = useModal()
+  const [openMobileList, setOpenMobileList] = useState(false)
   const {
     title,
     list,
@@ -28,6 +34,11 @@ const ServiceBox: FunctionComponent<Props> = ({ offer, scaleUp }) => {
     secondaryColor,
     mainColorRgbValues,
   } = OfferMap.get(offer)!
+
+  const handleClick = () => {
+    setOpenMobileList(!openMobileList)
+  }
+  const mobileButtonTitle = openMobileList ? 'Zamknij' : 'Otwórz'
   return (
     <>
       <StyledBox
@@ -35,11 +46,20 @@ const ServiceBox: FunctionComponent<Props> = ({ offer, scaleUp }) => {
         $fill={secondaryColor}
         $scaleUp={scaleUp}
       >
-        <StyledHeader>
-          <p>{title}</p>
-          <Icon />
+        <StyledHeader $rgbColorValue={mainColorRgbValues}>
+          <StyledTitle>{title}</StyledTitle>
+          <StyledIcon>
+            <Icon />
+          </StyledIcon>
+          <StyledExpandButton
+            onClick={handleClick}
+            $openMobileList={openMobileList}
+          >
+            <span>{mobileButtonTitle}</span>
+            <ExpandMore />
+          </StyledExpandButton>
         </StyledHeader>
-        <StyledList>
+        <StyledList $openMobileList={openMobileList}>
           {list.map((item) => (
             <StyledItem key={item}>
               <CheckPoint />
@@ -62,6 +82,7 @@ const ServiceBox: FunctionComponent<Props> = ({ offer, scaleUp }) => {
           title={title}
           list={list}
           secondaryColor={secondaryColor}
+          rgbColorValues={mainColorRgbValues}
         />
       )}
     </>

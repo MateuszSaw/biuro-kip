@@ -15,6 +15,7 @@ type Props = {
   list: string[]
   title: string
   secondaryColor: string
+  rgbColorValues: string
 }
 
 const Modal: FunctionComponent<Props> = ({
@@ -23,10 +24,11 @@ const Modal: FunctionComponent<Props> = ({
   list,
   title,
   secondaryColor,
+  rgbColorValues,
 }) => (
   <StyledModal open>
     <StyledWrapper $bgImageUrl={bgImageUrl}>
-      <StyledHeader>
+      <StyledHeader $rgbColorValues={rgbColorValues}>
         <p>{title}</p>
         <button onClick={() => handleOpen()}>
           <Exit />

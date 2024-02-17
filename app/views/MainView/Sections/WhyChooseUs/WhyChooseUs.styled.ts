@@ -15,9 +15,17 @@ const StyledCardsBox = styled.div`
   padding: 0 20px;
 
   ${({ theme }) => `
+      @media (${theme.breakpoints.tabletVertical}) {
+      grid-template-columns: repeat(auto-fill, 300px);
+      grid-template-rows: repeat(auto-fill, 370px);
+      gap: 14px;
+      padding: 0;
+    }
     @media (${theme.breakpoints.mobile}) {
-      grid-template-columns: repeat(auto-fill, 390px);
-      grid-template-rows: repeat(auto-fill, 350px);
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+      padding: 0 25px;
+      gap: 25px;
     }
   `}
 
@@ -88,6 +96,13 @@ const StyledCardsBox = styled.div`
     svg {
       transition: transform 0.5s ease;
       transform: scale(1.5);
+
+      ${({ theme }) => `
+        @media (${theme.breakpoints.mobile}) {
+          transition: unset;      
+          transform: unset;
+        }
+      `}
     }
   }
 `

@@ -9,7 +9,7 @@ const StyledSection = styled.section<{ $imageLink: string }>`
   position: relative;
 
   ${({ theme }) => `
-    @media (${theme.breakpoints.tablet}) {
+    @media (${theme.breakpoints.tabletVertical}) {
       height: unset;
     }
   `}
@@ -37,7 +37,7 @@ const StyledContent = styled.div`
   margin: 0 auto;
 
   ${({ theme }) => `
-    @media (${theme.breakpoints.laptopSmall}) {
+    @media (${theme.breakpoints.laptop}) {
       width: 100%;
       padding: 0 24px;
     }

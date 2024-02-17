@@ -8,6 +8,10 @@ const StyledHeader = styled.header`
 
   ${({ theme }) => `
     background-color: ${theme.colors.white};
+
+    @media (${theme.breakpoints.tablet}) {
+       position: relative;
+    }
   `}
 `
 
@@ -20,14 +24,14 @@ const StyledWrapper = styled.div`
   padding: 8px 0;
 
   ${({ theme }) => `
-    @media (${theme.breakpoints.laptopSmall}) {
+    @media (${theme.breakpoints.laptop}) {
       width: 100%;
       padding: 8px 24px;
     }
 
     @media (${theme.breakpoints.mobile}) {
       width: 100%;
-      padding: 0px 12px;
+      padding: 8px 12px;
     }
   `}
 `
@@ -46,6 +50,10 @@ const StyledLogo = styled.a`
   }
 
   ${({ theme }) => `
+    @media (${theme.breakpoints.tabletVertical}) {
+      height: 54px;
+    }
+
     @media (${theme.breakpoints.tablet}) {
       &:hover {
         transform: unset;
@@ -58,83 +66,4 @@ const StyledLogo = styled.a`
   `}
 `
 
-const StyledNavigation = styled.nav<{ open?: boolean }>`
-  display: flex;
-
-  ${({ theme, open }) => `
-    @media (${theme.breakpoints.tablet}) {
-      display: ${open ? 'flex' : 'none'};
-      flex-direction: column;
-      align-items: center;
-      position: fixed;
-      top: 80px;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background-color: ${theme.colors.white};
-      padding-top: 20px;
-    }
-
-    @media (${theme.breakpoints.mobile}) {
-      top: 64px;
-    }
-
-  `}
-`
-
-const StyledLink = styled.a<{ $disabledOnDesktop?: boolean }>`
-  display: ${({ $disabledOnDesktop }) =>
-    $disabledOnDesktop ? 'none' : 'inline-block'};
-  padding: 12px 22px;
-  margin-left: 8px;
-  font-size: 18px;
-  font-weight: 500;
-  border: 1px solid transparent;
-  border-radius: 40px;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(74, 58, 255, 0);
-  color: ${({ theme }) => theme.colors.primaryBlue};
-
-  cursor: pointer;
-  text-decoration: none;
-
-  &:hover,
-  &:focus {
-    box-shadow: 0 2px 4px rgba(74, 58, 255, 0.11);
-    border: 1px solid rgba(1, 76, 173, 0.5);
-    background-color: rgba(1, 76, 173, 0.1);
-  }
-
-  @media (${({ theme }) => theme.breakpoints.tablet}) {
-    display: inline-block;
-    font-size: 32px;
-    margin: 24px 10px 0 10px;
-  }
-`
-
-const StyledButton = styled.div`
-  display: none;
-
-  @media (${({ theme }) => theme.breakpoints.tablet}) {
-    display: block;
-    cursor: pointer;
-  }
-`
-
-const StyledIcon = styled.div`
-  display: none;
-
-  @media (${({ theme }) => theme.breakpoints.tablet}) {
-    display: flex;
-  }
-`
-
-export {
-  StyledHeader,
-  StyledWrapper,
-  StyledLogo,
-  StyledNavigation,
-  StyledLink,
-  StyledButton,
-  StyledIcon,
-}
+export { StyledHeader, StyledWrapper, StyledLogo }

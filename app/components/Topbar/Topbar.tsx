@@ -1,13 +1,7 @@
-import {
-  StyledHeader,
-  StyledLink,
-  StyledButton,
-  StyledNavigation,
-  StyledLogo,
-  StyledWrapper,
-} from './Topbar.styled'
-import { NAV_LIST } from './constants'
+import { StyledHeader, StyledLogo, StyledWrapper } from './Topbar.styled'
+
 import { FunctionComponent, useState } from 'react'
+import MenuList from './components/MenuList'
 import HamburgerMenu from './components/HamburgerMenu'
 
 const Topbar: FunctionComponent = () => {
@@ -15,25 +9,17 @@ const Topbar: FunctionComponent = () => {
 
   const handleClick = () => {
     setOpen(!open)
+    document.body.classList.toggle('no-scroll')
   }
+
+  const logoHref = open ? undefined : '#home'
 
   return (
     <StyledHeader>
       <StyledWrapper>
-        <StyledLogo href="#home" />
-        <StyledButton onClick={handleClick}>
-          <HamburgerMenu isOpen={open} />
-        </StyledButton>
-        <StyledNavigation open={open}>
-          <StyledLink href="#home" onClick={handleClick} $disabledOnDesktop>
-            Strona główna
-          </StyledLink>
-          {NAV_LIST.map(({ id, name }) => (
-            <StyledLink key={name} href={id} onClick={handleClick}>
-              {name}
-            </StyledLink>
-          ))}
-        </StyledNavigation>
+        <StyledLogo href={logoHref} />
+        <HamburgerMenu open={open} onClick={handleClick} />
+        <MenuList open={open} onClick={handleClick} />
       </StyledWrapper>
     </StyledHeader>
   )

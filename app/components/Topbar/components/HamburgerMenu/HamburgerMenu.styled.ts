@@ -1,6 +1,15 @@
 import styled from 'styled-components'
 
-const StyledHamburgerLines = styled.div<{ $isOpen: boolean }>`
+const StyledButton = styled.div`
+  display: none;
+
+  @media (${({ theme }) => theme.breakpoints.tablet}) {
+    display: block;
+    cursor: pointer;
+  }
+`
+
+const StyledHamburgerLines = styled.div<{ $open: boolean }>`
   height: 26px;
   width: 32px;
   display: flex;
@@ -16,18 +25,18 @@ const StyledHamburgerLines = styled.div<{ $isOpen: boolean }>`
 
     &:nth-child(1) {
       transform-origin: 0% 0%;
-      ${({ $isOpen }) => $isOpen && 'transform: rotate(45deg);'}
+      ${({ $open }) => $open && 'transform: rotate(45deg);'}
     }
 
     &:nth-child(2) {
-      ${({ $isOpen }) => $isOpen && 'transform: scaleY(0);'}
+      ${({ $open }) => $open && 'transform: scaleY(0);'}
     }
 
     &:nth-child(3) {
       transform-origin: 0% 100%;
-      ${({ $isOpen }) => $isOpen && 'transform: rotate(-45deg);'}
+      ${({ $open }) => $open && 'transform: rotate(-45deg);'}
     }
   }
 `
 
-export { StyledHamburgerLines }
+export { StyledButton, StyledHamburgerLines }

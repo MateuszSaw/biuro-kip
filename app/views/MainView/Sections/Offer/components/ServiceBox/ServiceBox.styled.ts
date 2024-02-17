@@ -1,3 +1,4 @@
+import ExpandMore from 'statics/Icons/ExpandMore'
 import styled from 'styled-components'
 
 const StyledBox = styled.div<{
@@ -10,12 +11,13 @@ const StyledBox = styled.div<{
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-height: 550px;
-  max-width: 450px;
+  height: 550px;
+  width: 450px;
   background-image: url(${({ $bgImageUrl }) => $bgImageUrl});
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 24px;
+  background-color: white;
 
   svg {
     fill: ${({ $fill }) => $fill};
@@ -24,34 +26,137 @@ const StyledBox = styled.div<{
   ${({ $scaleUp }) =>
     $scaleUp
       ? `
-      transform: scale(1.08);
-      z-index: 1;
-    background-color: white;
-  `
+        height: 585px;
+        width: 500px;
+        z-index: 1;
+       `
       : ''}
+
+  ${({ theme }) => `
+    @media (${theme.breakpoints.laptopSmall}) {
+      height: 500px;
+      width: 380px;    
+    }
+
+    @media (${theme.breakpoints.tabletVertical}) {
+      height: 500px;
+      width: 300px; 
+      padding: 20px 12px;
+    }
+
+    @media (${theme.breakpoints.tablet}) {
+      width: unset;
+      height: unset;
+      background-image: unset;
+      padding: unset;
+      margin-bottom: 20px;
+    }
+  `};
 `
-const StyledHeader = styled.div`
+
+const StyledHeader = styled.div<{ $rgbColorValue: string }>`
   width: 100%;
   display: flex;
   justify-content: space-between;
 
-  & > :first-child {
-    width: 50%;
-    font-size: 32px;
-    font-weight: 600;
-    margin: 0;
-    padding-bottom: 42px;
-    color: white;
-  }
+  ${({ theme, $rgbColorValue }) => `
+      @media (${theme.breakpoints.tablet}) {
+        background-color: rgb(${$rgbColorValue});
+        border-radius: 24px;
+        justify-content: unset;
+        align-items: center;
+        padding: 0px 14px;
+      }
+    `}
+`
 
-  & > :last-child {
+const StyledTitle = styled.div`
+  width: 50%;
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0;
+  padding-bottom: 42px;
+  color: white;
+
+  ${({ theme }) => `
+      @media (${theme.breakpoints.tabletVertical}) {
+        font-size: 24px;  
+      }
+
+      @media (${theme.breakpoints.tablet}) {
+        padding-bottom: unset;
+        width: unset;
+        order: 1;
+      }
+      @media (${theme.breakpoints.mobile}) {
+        font-size: 20px;
+      }
+    `}
+`
+const StyledIcon = styled.div`
+  svg {
+    margin-right: 14px;
     width: 50%;
     width: 80px;
     height: 80px;
+    ${({ theme }) => `
+      @media (${theme.breakpoints.tabletVertical}) and (min-width: 950px) {
+        width: 60px;
+        height: 60px;
+      }
+
+      @media (${theme.breakpoints.tablet}) {
+        margin: 6px 14px 0 20px;
+        width: 50px;
+        height: 50px;
+        order: 2;
+      }
+
+      @media (${theme.breakpoints.mobile}) {
+        margin: 4px 14px 0 8px;
+        width: 32px;
+        height: 32px;
+
+      }
+    `}
   }
 `
+const StyledExpandButton = styled.div<{ $openMobileList: boolean }>`
+  display: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px;
 
-const StyledList = styled.div`
+  ${({ theme, $openMobileList }) => `
+    color: ${theme.colors.white};
+    svg {
+      width: 28px;
+      height: 28px;
+      fill: ${theme.colors.white};
+    }
+
+    @media (${theme.breakpoints.tablet}) {
+     margin-left: auto;
+      order: 2;
+      display: flex;
+      align-items: center;
+
+      svg {
+        transition: transform 0.3s ease-in-out;
+        transform: ${$openMobileList ? 'rotate(180deg)' : 'rotate(0deg)'};
+      }
+    }
+
+    @media (${theme.breakpoints.mobile}) {
+      span {
+        display: none;
+      }
+    }
+  `}
+`
+
+const StyledList = styled.div<{ $openMobileList: boolean }>`
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -66,11 +171,32 @@ const StyledList = styled.div`
     max-height: 28px;
     margin-right: 8px;
   }
+
+  ${({ theme, $openMobileList }) => `
+      @media (${theme.breakpoints.tabletVertical}) and (min-width: 950px) {
+        font-size: 14px;
+      }
+      
+      @media (${theme.breakpoints.tablet}) {
+        padding: unset;
+        transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        opacity: ${$openMobileList ? '1' : '0'};
+        height: ${$openMobileList ? '100%' : '0'};
+      & > :first-child {
+          padding-top: 20px;
+        }
+      }
+    `}
 `
 
 const StyledItem = styled.div`
   display: flex;
   padding-bottom: 8px;
+  ${({ theme }) => `
+    @media (${theme.breakpoints.tablet}) {
+      padding: 4px 20px;
+    }
+  `}
 `
 
 const StyledButton = styled.button<{
@@ -98,6 +224,26 @@ const StyledButton = styled.button<{
       border: 1px solid ${$secondaryColor};
     }
   `}
+
+  ${({ theme }) => `
+      @media (${theme.breakpoints.tabletVertical}) and (min-width: 950px) {
+        font-size: 14px;
+        padding: 10px 18px;
+      }
+
+       @media (${theme.breakpoints.tablet}) {
+        display: none;
+      }
+    `}
 `
 
-export { StyledList, StyledItem, StyledBox, StyledHeader, StyledButton }
+export {
+  StyledTitle,
+  StyledIcon,
+  StyledList,
+  StyledItem,
+  StyledBox,
+  StyledHeader,
+  StyledButton,
+  StyledExpandButton,
+}

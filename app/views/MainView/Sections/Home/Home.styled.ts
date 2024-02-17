@@ -31,10 +31,10 @@ const StyledHeader = styled.div`
 
     @media (${theme.breakpoints.tablet}) {
       font-size: 42px;
+      padding-top: 40px;
     }
 
     @media (${theme.breakpoints.mobile}) {
-      padding-top: 100px;
       font-size: 38px;
       text-align: center;
     }

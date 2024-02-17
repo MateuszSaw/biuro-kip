@@ -16,5 +16,9 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${({ theme }) => theme.colors.white};
     overflow-x: hidden;
   }
+
+  .no-scroll {
+    overflow-y: hidden;
+  }
 `
 export default GlobalStyle

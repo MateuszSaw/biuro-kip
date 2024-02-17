@@ -5,7 +5,6 @@ const StyledModal = styled.dialog`
   width: 100vw;
   height: 100vh;
   z-index: 2000;
-
   top: 0;
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 1;
@@ -16,8 +15,8 @@ const StyledWrapper = styled.div<{ $bgImageUrl: string }>`
   position: absolute;
   top: 50%;
   left: 50%;
-  height: 95%;
-  width: 80%;
+  /* height: 95%; */
+  width: 60%;
   display: flex;
   flex-direction: column;
   z-index: 2100;
@@ -28,15 +27,25 @@ const StyledWrapper = styled.div<{ $bgImageUrl: string }>`
     rgba(0, 0, 0, 0.14) 0px 24px 38px 3px,
     rgba(0, 0, 0, 0.12) 0px 9px 46px 8px;
 
-  padding: 32px;
+  padding: 18px;
   border-radius: 24px;
 
   background-image: url(${({ $bgImageUrl }) => $bgImageUrl});
   background-size: cover;
   background-repeat: no-repeat;
+
+  ${({ theme }) => `
+    @media (${theme.breakpoints.tabletVertical}) {
+      padding: unset;
+      background-image: unset;
+      background-size: unset;
+      background-repeat: unset;
+      height: unset;
+    }
+  `}
 `
 
-const StyledHeader = styled.div`
+const StyledHeader = styled.div<{ $rgbColorValues: string }>`
   width: 100%;
   display: flex;
   align-items: center;
@@ -60,6 +69,22 @@ const StyledHeader = styled.div`
     height: 40px;
     fill: white;
   }
+
+  ${({ theme, $rgbColorValues }) => `
+    @media (${theme.breakpoints.tabletVertical}) {
+      background-color: rgb(${$rgbColorValues});
+      padding: 8px 24px;
+      border-radius: 24px;
+      margin-bottom: unset;
+        P {
+          font-size: 24px;
+        }
+        svg {
+          width: 32px;
+          height: 32px;
+        }
+    }
+  `}
 `
 
 const StyledList = styled.div`
@@ -69,6 +94,13 @@ const StyledList = styled.div`
   justify-content: center;
   align-items: start;
   font-size: 18px;
+
+  ${({ theme }) => `
+    @media (${theme.breakpoints.tabletVertical}) {
+      padding: 12px;
+      font-size: 14px;
+    }
+  `}
 `
 
 const StyledItem = styled.div<{ $secondaryColor: string }>`
@@ -83,6 +115,15 @@ const StyledItem = styled.div<{ $secondaryColor: string }>`
     margin: 4px 8px 0 0;
     fill: ${({ $secondaryColor }) => $secondaryColor};
   }
+  ${({ theme }) => `
+    @media (${theme.breakpoints.tabletVertical}) {
+      padding-bottom: 8px;
+
+      svg {
+        margin: 2px 6px 0 0;
+      }
+    }
+  `}
 `
 
 export { StyledModal, StyledWrapper, StyledHeader, StyledList, StyledItem }

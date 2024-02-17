@@ -1,18 +1,19 @@
 import { FunctionComponent } from 'react'
-import { StyledHamburgerLines } from './HamburgerMenu.styled'
+import { StyledButton, StyledHamburgerLines } from './HamburgerMenu.styled'
 
 type Props = {
-  isOpen: boolean
+  open: boolean
+  onClick: VoidFunction
 }
 
-const HamburgerMenu: FunctionComponent<Props> = ({ isOpen }) => {
-  return (
-    <StyledHamburgerLines $isOpen={isOpen}>
+const HamburgerMenu: FunctionComponent<Props> = ({ open, onClick }) => (
+  <StyledButton onClick={onClick}>
+    <StyledHamburgerLines $open={open}>
       <span />
       <span />
       <span />
     </StyledHamburgerLines>
-  )
-}
+  </StyledButton>
+)
 
 export default HamburgerMenu

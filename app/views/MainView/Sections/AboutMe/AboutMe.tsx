@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'react'
-import { StyledPhoto, StyledBackground, StyledWrapper } from './AbaoutMe.styled'
+import { StyledPhoto, StyledBackground, StyledWrapper } from './AboutMe.styled'
 import { StyledContent } from '../Company/Company.styled'
 import Header from 'components/Header'
 

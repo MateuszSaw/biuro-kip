@@ -15,7 +15,8 @@ const theme = {
     mobile: 'max-width: 640px',
     tablet: 'max-width: 950px',
     tabletVertical: 'max-width: 1180px',
-    laptopSmall: 'max-width: 1668px',
+    laptopSmall: 'max-width: 1380px',
+    laptop: 'max-width: 1668px',
   },
   sizes: {
     header: '56px',
