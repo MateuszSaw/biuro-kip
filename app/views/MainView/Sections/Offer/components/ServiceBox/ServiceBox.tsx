@@ -7,7 +7,6 @@ import {
   StyledList,
   StyledHeader,
   StyledButton,
-  StyledExpandMore,
   StyledTitle,
   StyledExpandButton,
 } from './ServiceBox.styled'
