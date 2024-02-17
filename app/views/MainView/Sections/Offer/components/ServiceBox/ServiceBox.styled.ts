@@ -1,4 +1,3 @@
-import ExpandMore from 'statics/Icons/ExpandMore'
 import styled from 'styled-components'
 
 const StyledBox = styled.div<{
