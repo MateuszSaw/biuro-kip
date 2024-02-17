@@ -24,7 +24,7 @@ const StyledWrapper = styled.div`
     @media (${theme.breakpoints.tabletVertical}) {
       height: unset;
       min-height: unset;
-      padding: 80px 12px 32px 12px;
+      padding: 70px 12px 32px 12px;
     }
 
     @media (${theme.breakpoints.tablet}) {

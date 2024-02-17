@@ -9,8 +9,8 @@ const StyledWrapper = styled.div`
   ${({ theme }) => `
     @media (${theme.breakpoints.laptop}) {
       grid-template-columns: 1fr 550px 1fr;
-      margin-top: 50px;
     }
+    
     @media (max-width: 1380px) {
         grid-template-columns: 1fr 400px 1fr;
         gap: 20px;

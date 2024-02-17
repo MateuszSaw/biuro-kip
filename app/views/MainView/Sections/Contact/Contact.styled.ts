@@ -56,7 +56,7 @@ const StyledContactItem = styled.a`
   ${({ theme }) => `
     @media (${theme.breakpoints.mobile}) {
       padding: 12px 6px;
-        font-size: 16px;
+      font-size: 16px;
 
       svg {
         width: 60px;
