@@ -19,7 +19,10 @@ const Contact: FunctionComponent = () => (
           <Phone />
           <span>+48 888 797 051</span>
         </StyledContactItem>
-        <StyledContactItem href="mailto:twojemail@example.com" target="blank">
+        <StyledContactItem
+          href="mailto:agnieszka.swierczek@biuro-kip.pl"
+          target="blank"
+        >
           <Mail />
           <span>agnieszka.swierczek@biuro-kip.pl</span>
         </StyledContactItem>
