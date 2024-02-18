@@ -15,11 +15,14 @@ const Contact: FunctionComponent = () => (
           endText="z nami"
           subtitle="Odpowiemy na Twoje pytania podczas bezpłatnej konsultacji."
         />
-        <StyledContactItem href="tel:+48333222555" target="blank">
+        <StyledContactItem href="+48 888 797 051" target="blank">
           <Phone />
           <span>+48 888 797 051</span>
         </StyledContactItem>
-        <StyledContactItem href="mailto:twojemail@example.com" target="blank">
+        <StyledContactItem
+          href="mailto:agnieszka.swierczek@biuro-kip.pl"
+          target="blank"
+        >
           <Mail />
           <span>agnieszka.swierczek@biuro-kip.pl</span>
         </StyledContactItem>
