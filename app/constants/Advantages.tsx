@@ -48,12 +48,16 @@ const ADVANTAGES = [
       <>
         Nasza firma współpracuje z:
         <li>
-          kancelarią prawną specjalizującą się w prawie pracy. Ewa Rakiel
-          dowiedz się więcej <a href="https://rakiel.com.pl/">klikając tutaj</a>
+          kancelarią prawną
+          <a href="https://rakiel.com.pl/" target="blank">
+            {' '}
+            Ewa Rakiel{' '}
+          </a>
+          specjalizującą się w prawie pracy.
         </li>
         <li>
-          firmą zajmującą się obsługą księgowości - Partner Biznesu Iwona
-          Krzyżanowska.
+          firmą zajmującą się obsługą księgowości - <br />
+          Partner Biznesu Iwona Krzyżanowska.
         </li>
       </>
     ),

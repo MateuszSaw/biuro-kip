@@ -18,7 +18,6 @@ const StyledWrapper = styled.div`
     @media (${theme.breakpoints.laptop}) {
       width: 100%;
       padding: 92px 12px 24px 12px;
-
     }
 
     @media (${theme.breakpoints.tabletVertical}) {

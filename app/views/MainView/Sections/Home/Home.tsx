@@ -11,19 +11,27 @@ const Home = () => {
   return (
     <SectionWithPhoto link="home" imageLink={HOME_IMAGE_LINK}>
       <StyledWrapper>
-        <StyledHeader>OUTSOURCING KADR I PŁAC</StyledHeader>
+        <StyledHeader translate="no">OUTSOURCING KADR I PŁAC</StyledHeader>
         <StyledSubtitle>
           <p>Twoje kadry i płace w bezpiecznych rękach</p>
-          Postaw na rzetelną i profesjonalną obsługę kadrowo-płacową. Zadbamy o
-          poprawne naliczanie wynagrodzeń Twoich pracowników oraz zgodne z
-          przepisami administrowanie dokumentacją kadrową w Twojej organizacji.
+          Postaw na rzetelną i profesjonalną obsługę kadrowo-płacową.
+          <br />
+          <br />
+          Zadbamy o poprawne naliczanie wynagrodzeń Twoich pracowników oraz
+          zgodne z przepisami administrowanie dokumentacją kadrową w Twojej
+          organizacji.
         </StyledSubtitle>
         <StyledSubtitle>
           Nasza oferta skierowana jest do przedsiębiorstw oczekujących
           stabilności, pragnących zwiększyć efektywność, zminimalizować koszty
-          oraz ryzyka związane z utrzymaniem działów wewnętrznych. Jesteśmy z
-          Gdańska ale współpracujemy również online. Skontaktuj się z nami już
-          teraz, byśmy mogli zadbać o Twój biznes tak, jakby był naszym własnym.
+          oraz ryzyka związane z utrzymaniem działów wewnętrznych.
+          <br />
+          <br />
+          Jesteśmy z Gdańska ale współpracujemy również online.
+          <br />
+          <br />
+          <a href="#contact">Skontaktuj się z nami</a> już teraz, byśmy mogli
+          zadbać o Twój biznes tak, jakby był naszym własnym.
         </StyledSubtitle>
         <StyledFooterInfo>
           KADRY – PŁACE – KONSULTING – ZUS – PIT – PFRON – CUDZOZIEMCY –

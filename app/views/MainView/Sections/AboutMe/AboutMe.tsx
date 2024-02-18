@@ -13,8 +13,6 @@ const AboutMe: FunctionComponent = () => (
           endText="misja"
           subtitle="Jesteśmy partnerem godnym zaufania"
         />
-        {/* <StyledTag>nasza misja</StyledTag>
-        <StyledHeader>Jesteśmy partnerem godnym zaufania</StyledHeader> */}
         <p>
           Nasze biuro specjalizuje się w{' '}
           <span>

@@ -1,3 +1,4 @@
+import Header from 'components/Header'
 import styled from 'styled-components'
 
 const StyledWrapper = styled.div`
@@ -72,4 +73,10 @@ const StyledContent = styled.div`
   `}
 `
 
-export { StyledWrapper, StyledPhoto, StyledContent }
+const StyledHeader = styled.div`
+  & > p {
+    font-weight: 600 !important;
+  }
+`
+
+export { StyledWrapper, StyledPhoto, StyledContent, StyledHeader }

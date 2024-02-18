@@ -44,6 +44,13 @@ const StyledHeader = styled.div`
 const StyledSubtitle = styled.div`
   max-width: 900px;
   padding-bottom: 50px;
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+  }
+
   ${({ theme }) => `
     
     @media (${theme.breakpoints.tablet}) {
