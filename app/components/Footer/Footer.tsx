@@ -8,7 +8,7 @@ import Exit from 'statics/Icons/Exit'
 const Footer: FunctionComponent = () => {
   const { open, handleOpen } = useModal()
   return (
-    <StyledFooter>
+    <StyledFooter $open={open}>
       <StyledButton onClick={handleOpen}>
         Copyright © Polityka prywatności
       </StyledButton>

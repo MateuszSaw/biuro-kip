@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const StyledFooter = styled.footer`
+const StyledFooter = styled.footer<{ $open: boolean }>`
   position: relative;
   width: 100%;
   padding: 12px;
@@ -8,11 +8,8 @@ const StyledFooter = styled.footer`
   justify-content: center;
   align-items: center;
   margin-top: -60px;
-  z-index: 3;
-  ${({ theme }) => `
-    @media (${theme.breakpoints.tabletVertical}) {
-      // position: unset;
-    }
+  ${({ $open }) => `
+    z-index: ${$open ? 'unset' : '3'};
   `}
 `
 

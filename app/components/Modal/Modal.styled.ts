@@ -15,7 +15,7 @@ const StyledWrapper = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 70%;
+  width: 60%;
   max-height: 95%;
   display: flex;
   flex-direction: column;
