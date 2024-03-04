@@ -8,9 +8,9 @@ const StyledWrapper = styled.div<{ $ShouldBeVisible: boolean }>`
   z-index: 2;
   width: auto;
   align-items: flex-end;
-  transition:
+  /* transition:
     opacity 0.3s ease-in-out,
-    visibility 0.3s ease-in-out;
+    visibility 0.3s ease-in-out; */
   cursor: pointer;
   width: 40px;
   height: 40px;
@@ -25,13 +25,12 @@ const StyledWrapper = styled.div<{ $ShouldBeVisible: boolean }>`
 
   ${({ theme, $ShouldBeVisible }) => `
       @media (${theme.breakpoints.tablet}) {
-      display: block;
+      display: ${$ShouldBeVisible ? 'block' : 'none'}
     }
 
     background-color: ${theme.colors.lightGrey}};
-    opacity: ${$ShouldBeVisible ? '1' : '0'};
-    visibility: ${$ShouldBeVisible ? 'visible' : 'hidden'};
-
+    // opacity: ${$ShouldBeVisible ? '1' : '0'};
+    // visibility: ${$ShouldBeVisible ? 'visible' : 'hidden'};
   `}
 `
 

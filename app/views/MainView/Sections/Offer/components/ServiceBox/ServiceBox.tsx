@@ -12,9 +12,9 @@ import {
 } from './ServiceBox.styled'
 import Offers from '../../constatns/Offers'
 import OfferMap from './utils/offerMap'
-import Modal from '../Modal'
-import useModal from '../Modal/hooks/useModal'
 import ExpandMore from 'statics/Icons/ExpandMore'
+import useModal from 'components/Modal/hooks/useModal'
+import OfferModal from '../OfferModal'
 
 type Props = {
   offer: Offers
@@ -24,20 +24,15 @@ type Props = {
 const ServiceBox: FunctionComponent<Props> = ({ offer, scaleUp }) => {
   const { open, handleOpen } = useModal()
   const [openMobileList, setOpenMobileList] = useState(false)
-  const {
-    title,
-    list,
-    Icon,
-    bgImageUrl,
-    modalBgImageUrl,
-    secondaryColor,
-    mainColorRgbValues,
-  } = OfferMap.get(offer)!
+  const { title, list, Icon, bgImageUrl, secondaryColor, mainColorRgbValues } =
+    OfferMap.get(offer)!
 
   const handleClick = () => {
     setOpenMobileList(!openMobileList)
   }
+
   const mobileButtonTitle = openMobileList ? 'Zamknij' : 'Otwórz'
+
   return (
     <>
       <StyledBox
@@ -45,15 +40,12 @@ const ServiceBox: FunctionComponent<Props> = ({ offer, scaleUp }) => {
         $fill={secondaryColor}
         $scaleUp={scaleUp}
       >
-        <StyledHeader $rgbColorValue={mainColorRgbValues}>
+        <StyledHeader onClick={handleClick} $rgbColorValue={mainColorRgbValues}>
           <StyledTitle>{title}</StyledTitle>
           <StyledIcon>
             <Icon />
           </StyledIcon>
-          <StyledExpandButton
-            onClick={handleClick}
-            $openMobileList={openMobileList}
-          >
+          <StyledExpandButton $openMobileList={openMobileList}>
             <span>{mobileButtonTitle}</span>
             <ExpandMore />
           </StyledExpandButton>
@@ -75,9 +67,8 @@ const ServiceBox: FunctionComponent<Props> = ({ offer, scaleUp }) => {
         </StyledButton>
       </StyledBox>
       {open && (
-        <Modal
+        <OfferModal
           handleOpen={handleOpen}
-          bgImageUrl={modalBgImageUrl}
           title={title}
           list={list}
           secondaryColor={secondaryColor}

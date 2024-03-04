@@ -10,7 +10,7 @@ const StyledContent = styled.div`
 
   ${({ theme }) => `
     @media (${theme.breakpoints.tabletVertical}) {
-      padding-top: unset;
+      padding: 20px 0 60px 0;
       justify-content: center;
     }
   `}

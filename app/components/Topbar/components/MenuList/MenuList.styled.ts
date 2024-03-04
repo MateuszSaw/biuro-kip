@@ -1,49 +1,5 @@
 import styled from 'styled-components'
 
-// const StyledNavigation = styled.nav<{ open?: boolean }>`
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   position: fixed;
-//   top: 80px;
-//   left: 0;
-//   height: 100%;
-//   width: 100%;
-//   background-color: ${({ theme }) => theme.colors.white};
-//   padding-top: 20px;
-
-//   @media (${({ theme }) => theme.breakpoints.tablet}) {
-//     display: none;
-//   }
-// `
-
-// const StyledLink = styled.a`
-//   display: inline-block;
-//   padding: 12px 22px;
-//   margin-left: 8px;
-//   font-size: 18px;
-//   font-weight: 500;
-//   border: 1px solid transparent;
-//   border-radius: 40px;
-//   transition: all 0.3s ease;
-//   box-shadow: 0 2px 4px rgba(74, 58, 255, 0);
-//   color: ${({ theme }) => theme.colors.primaryBlue};
-
-//   cursor: pointer;
-//   text-decoration: none;
-
-//   &:hover,
-//   &:focus {
-//     box-shadow: 0 2px 4px rgba(74, 58, 255, 0.11);
-//     border: 1px solid rgba(1, 76, 173, 0.5);
-//     background-color: rgba(1, 76, 173, 0.1);
-//   }
-
-//   @media (${({ theme }) => theme.breakpoints.tablet}) {
-//     display: none;
-//   }
-// `
-
 const StyledNavigation = styled.nav<{ open?: boolean }>`
   display: flex;
 
@@ -52,10 +8,10 @@ const StyledNavigation = styled.nav<{ open?: boolean }>`
       display: ${open ? 'flex' : 'none'};
       flex-direction: column;
       align-items: center;
-      position: fixed;
+      position: absolute;
       top: 70px;
       left: 0;
-      height: 100%;
+      height: 100vh;
       width: 100%;
       background-color: ${theme.colors.white};
       padding-top: 20px;    

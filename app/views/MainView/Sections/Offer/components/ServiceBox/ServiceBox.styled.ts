@@ -57,6 +57,7 @@ const StyledHeader = styled.div<{ $rgbColorValue: string }>`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  pointer-events: none;
 
   ${({ theme, $rgbColorValue }) => `
       @media (${theme.breakpoints.tablet}) {
@@ -65,6 +66,11 @@ const StyledHeader = styled.div<{ $rgbColorValue: string }>`
         justify-content: unset;
         align-items: center;
         padding: 0px 14px;
+      }
+
+      @media (${theme.breakpoints.tablet}) {
+        pointer-events: unset;
+        cursor: pointer;
       }
     `}
 `
@@ -124,7 +130,6 @@ const StyledExpandButton = styled.div<{ $openMobileList: boolean }>`
   display: none;
   font-size: 16px;
   font-weight: 600;
-  cursor: pointer;
   padding: 4px;
 
   ${({ theme, $openMobileList }) => `

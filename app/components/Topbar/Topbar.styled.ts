@@ -10,7 +10,7 @@ const StyledHeader = styled.header`
     background-color: ${theme.colors.white};
 
     @media (${theme.breakpoints.tablet}) {
-       position: relative;
+      //  position: relative;
     }
   `}
 `
