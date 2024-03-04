@@ -8,10 +8,10 @@ const StyledNavigation = styled.nav<{ open?: boolean }>`
       display: ${open ? 'flex' : 'none'};
       flex-direction: column;
       align-items: center;
-      position: absolute;
+      position: fixed;
       top: 70px;
       left: 0;
-      height: 100vh;
+      height: 100%;
       width: 100%;
       background-color: ${theme.colors.white};
       padding-top: 20px;    

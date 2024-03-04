@@ -5,7 +5,6 @@ import scrollToTop from './utils/scrollToTop'
 
 const ScrollToTop: FunctionComponent = () => {
   const [isVisibile, setIsVisible] = useState(false)
-
   useEffect(() => {
     window.addEventListener('scroll', toggleVisibility)
   }, [])
@@ -14,13 +13,8 @@ const ScrollToTop: FunctionComponent = () => {
     setIsVisible(window.scrollY > 300)
   }
 
-  const handleClick = () => {
-    setIsVisible(false)
-    scrollToTop()
-  }
-
   return (
-    <StyledWrapper onClick={handleClick} $ShouldBeVisible={isVisibile}>
+    <StyledWrapper onClick={scrollToTop} $ShouldBeVisible={isVisibile}>
       <Top />
     </StyledWrapper>
   )

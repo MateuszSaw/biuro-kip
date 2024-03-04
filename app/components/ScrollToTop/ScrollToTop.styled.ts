@@ -3,14 +3,11 @@ import styled from 'styled-components'
 const StyledWrapper = styled.div<{ $ShouldBeVisible: boolean }>`
   display: none;
   position: fixed;
-  bottom: 1%;
-  right: 1%;
+  bottom: 5%;
+  right: 2%;
   z-index: 2;
   width: auto;
   align-items: flex-end;
-  /* transition:
-    opacity 0.3s ease-in-out,
-    visibility 0.3s ease-in-out; */
   cursor: pointer;
   width: 40px;
   height: 40px;
@@ -29,8 +26,6 @@ const StyledWrapper = styled.div<{ $ShouldBeVisible: boolean }>`
     }
 
     background-color: ${theme.colors.lightGrey}};
-    // opacity: ${$ShouldBeVisible ? '1' : '0'};
-    // visibility: ${$ShouldBeVisible ? 'visible' : 'hidden'};
   `}
 `
 
