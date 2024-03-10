@@ -10,12 +10,12 @@ const Footer: FunctionComponent = () => {
   return (
     <StyledFooter $open={open}>
       <StyledButton onClick={handleOpen}>
-        Copyright © Polityka prywatności
+        Copyright © Polityka prywatności 2024
       </StyledButton>
       {open && (
         <Modal>
           <StyledHeader>
-            <h2>Polityka prywatności</h2>
+            <h2>Polityka prywatności 2024</h2>
             <button onClick={handleOpen}>
               <Exit />
             </button>

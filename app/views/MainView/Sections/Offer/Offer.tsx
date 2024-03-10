@@ -14,12 +14,12 @@ const Offer: FunctionComponent = () => (
         <StyledSubtitle>
           <p>
             Każdego klienta traktujemy indywidualnie, dlatego ceny naszych usług
-            ustalane są w drodze indywidualnych ustaleń z klientem. Oferta cena
-            uzależniona jest od liczby zatrudnionych pracowników, wykonywanych
-            procesów i indywidualnych potrzeb Klienta.
+            ustalane są w drodze indywidualnych ustaleń z klientem. Oferta
+            cenowa uzależniona jest od liczby zatrudnionych pracowników,
+            wykonywanych procesów i indywidualnych potrzeb Klienta.
           </p>
           <p>
-            W ramach świadczonych usług oferujemy usługi płacowe, kompleksowe
+            W ramach świadczonych usług oferujemy: usługi płacowe, kompleksowe
             usługi kadrowo-płacowe oraz skorzystanie z naszych dodatkowych
             usług:
           </p>

@@ -5,6 +5,7 @@ import { StyledBox, StyledContactItem, StyledContent } from './Contact.styled'
 import Header from 'components/Header'
 import Phone from 'statics/Icons/Phone'
 import Mail from 'statics/Icons/Mail'
+import Pin from 'statics/Icons/Pin'
 
 const Contact: FunctionComponent = () => (
   <SectionWithPhoto link="contact" imageLink={CONTACT_IMAGE_LINK}>
@@ -25,6 +26,14 @@ const Contact: FunctionComponent = () => (
         >
           <Mail />
           <span>agnieszka.swierczek@biuro-kip.pl</span>
+        </StyledContactItem>
+        <StyledContactItem>
+          <Pin />
+          <span>
+            Usługi kadrowo-płacowe Agnieszka Świerczek <br />
+            Ul. Azaliowa 21/2 <br />
+            80-177 Gdańsk
+          </span>
         </StyledContactItem>
       </StyledBox>
     </StyledContent>

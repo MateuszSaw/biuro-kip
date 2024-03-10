@@ -65,15 +65,15 @@ const StyledTextContainer = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
 
   span {
-    max-width: 1100px;
-    padding-bottom: 16px;
+    max-width: 1000px;
+    padding-bottom: 38px;
 
     ${({ theme }) => `
     @media (${theme.breakpoints.tablet}) {
       max-width: 600px;
+      padding-bottom: 16px;
     }
 
     @media (${theme.breakpoints.mobile}) {

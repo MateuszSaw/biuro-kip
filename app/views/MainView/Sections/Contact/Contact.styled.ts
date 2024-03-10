@@ -19,7 +19,7 @@ const StyledContent = styled.div`
 const StyledBox = styled.div`
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 24px;
-  padding: 56px 24px;
+  padding: 44px;
   text-align: center;
 
   ${({ theme }) => `
@@ -38,17 +38,17 @@ const StyledBox = styled.div`
 const StyledContactItem = styled.a`
   text-decoration: none;
   margin: 4px;
-  padding: 24px 12px;
+  padding: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 24px;
+  font-size: 20px;
   color: black;
   font-weight: 600;
 
   svg {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     margin-right: 8px;
     fill: #226fb0;
   }
