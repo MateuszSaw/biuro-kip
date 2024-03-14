@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .no-scroll {
-    overflow-y: hidden;
+    overflow-y: hidden!important;
   }
 `
 export default GlobalStyle

@@ -19,7 +19,7 @@ const StyledWrapper = styled.div`
 `
 
 const StyledPhoto = styled.div`
-  background-image: url('app/statics/images/aboutMe.jpg');
+  background-image: url('app/statics/images/aboutMe.webp');
   width: 500px;
   height: 600px;
   background-position: center;

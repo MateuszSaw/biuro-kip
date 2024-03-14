@@ -27,7 +27,10 @@ const Contact: FunctionComponent = () => (
           <Mail />
           <span>agnieszka.swierczek@biuro-kip.pl</span>
         </StyledContactItem>
-        <StyledContactItem>
+        <StyledContactItem
+          href="https://maps.app.goo.gl/VvGixbt4Pr7TMWwb8"
+          target="blank"
+        >
           <Pin />
           <span>
             Usługi kadrowo-płacowe Agnieszka Świerczek <br />

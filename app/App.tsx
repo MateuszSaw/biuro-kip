@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components'
 import router from 'constants/router'
 import theme from 'constants/theme'
 import GlobalStyle from 'common/GlobalStyle'
+import styles from 'common/styles.css'
 
 const App: FunctionComponent = () => (
   <ThemeProvider theme={theme}>

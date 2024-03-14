@@ -47,18 +47,20 @@ const ADVANTAGES = [
     description: (
       <>
         Nasza firma współpracuje z:
-        <li>
-          kancelarią prawną
-          <a href="https://rakiel.com.pl/" target="blank">
-            {' '}
-            Ewa Rakiel{' '}
-          </a>
-          specjalizującą się w prawie pracy.
-        </li>
-        <li>
-          firmą zajmującą się obsługą księgowości - <br />
-          Partner Biznesu Iwona Krzyżanowska.
-        </li>
+        <ul>
+          <li>
+            kancelarią prawną
+            <a href="https://rakiel.com.pl/" target="blank">
+              {' '}
+              Ewa Rakiel{' '}
+            </a>
+            specjalizującą się w prawie pracy.
+          </li>
+          <li>
+            firmą zajmującą się obsługą księgowości - <br />
+            Partner Biznesu Iwona Krzyżanowska.
+          </li>
+        </ul>
       </>
     ),
     Icon: Briefcase,

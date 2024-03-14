@@ -31,6 +31,8 @@ const StyledWrapper = styled.div`
   ${({ theme }) => `
     @media (${theme.breakpoints.tabletVertical}) {
         width: 90%;
+        max-height: 85%;
+        top: 45%;
     }
   `}
 `

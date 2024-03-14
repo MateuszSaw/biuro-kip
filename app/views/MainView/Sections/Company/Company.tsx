@@ -12,7 +12,7 @@ import Header from 'components/Header'
 const Company: FunctionComponent = () => (
   <Section link="company">
     <StyledWrapper>
-      <StyledPhoto $imageLink="/aboutMe.jpg" />
+      <StyledPhoto $imageLink="/aboutMe.webp" />
       <StyledContent>
         <StyledHeader>
           <Header
@@ -23,7 +23,7 @@ const Company: FunctionComponent = () => (
         </StyledHeader>
         <Text />
       </StyledContent>
-      <StyledPhoto $imageLink="/company2.png" />
+      <StyledPhoto $imageLink="/company2.webp" />
     </StyledWrapper>
   </Section>
 )
