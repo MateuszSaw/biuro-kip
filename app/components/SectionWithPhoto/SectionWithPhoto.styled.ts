@@ -5,12 +5,17 @@ const StyledSection = styled.section<{ $imageLink: string }>`
   height: 100vh;
   background-size: cover;
   background-position: center;
-  background-image: url(${({ $imageLink }) => $imageLink});
   position: relative;
 
-  ${({ theme }) => `
+  ${({ theme, $imageLink }) => `
+    background-image: url(${$imageLink}.webp);
+
     @media (${theme.breakpoints.tabletVertical}) {
       height: unset;
+    }
+
+    @media (${theme.breakpoints.tabletVertical}) {
+        background-image: url(${$imageLink}-mobile.webp);
     }
   `}
 `
