@@ -85,7 +85,7 @@ const StyledTextContainer = styled.div`
   a {
     text-decoration: none;
     color: white;
-    font-weight: 700;
+    font-weight: 600;
     border-bottom: 1px solid white;
   }
 `
