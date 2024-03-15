@@ -43,7 +43,7 @@ const ADVANTAGES = [
     Icon: Safety,
   },
   {
-    title: 'Rzetelnosć',
+    title: 'Rzetelność',
     description: (
       <>
         Nasza firma współpracuje z:
